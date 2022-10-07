@@ -7,6 +7,13 @@ const nullSubmit = document.getElementById("non");
 const tickPrice = 0.21;
 console.log(btnSubmit);
 
+// Selezionare output 
+const titTot = document.querySelector(".tickets");
+console.log(titTot);
+const payPrice = document.querySelector(".pay");
+
+console.log(payPrice);
+
 //Creare un Event al click
 btnSubmit.addEventListener("click", function(){
     const userKmValue = parseInt(userKm.value);
@@ -25,6 +32,10 @@ btnSubmit.addEventListener("click", function(){
     //calcolare il totale in base alle indicazioni
     const price = totalPrice - discountPrice;
     console.log(price.toFixed(2));
+    //Output
+    payPrice.style.display="block";
+    
+    payPrice.innerHTML += (price.toFixed(2));
     
     
     
@@ -34,6 +45,8 @@ nullSubmit.addEventListener("click", function(){
     userKm.value="";
     
     userAge.value="";
+    
+    payPrice.style.display="none";
     
 })
 

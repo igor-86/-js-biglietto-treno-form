@@ -8,3 +8,9 @@
 .form {
     padding: 2rem 0rem;
 }
+.tickets {
+    background-color: aquamarine;
+}
+.pay.active {
+   background-color: blue;
+}
